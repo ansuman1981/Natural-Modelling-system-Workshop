@@ -45,3 +45,21 @@ data$JanGroup <- cut(data$Jan,
 data$FebGroup <- cut(data$Feb,
                      breaks = c(0, 1000000, 5000000, Inf),
                      labels = c("Low", "Moderate", "High"))
+
+
+
+# Convert to long format 
+
+river_cat <- data.frame(
+  Month = rep(c("January", "February"), each = nrow(data)),
+  FlowGroup = c(data$JanGroup, data$FebGroup)
+)
+
+#Create Pivot Table
+pivot_table <- table(river_cat$Month, river_cat$FlowGroup)
+
+pivot_table
+
+#Convert to Percentages
+
+prop_table <- prop.table(pivot_table, margin = 1)
