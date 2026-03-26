@@ -88,3 +88,35 @@ a = 1.361
 b = -0.00243
 r = a + b*N
 r
+
+#exercie 4 
+#A
+N = 700
+R0 = 1.361
+K = 560
+GN = R0*N*(1-N/K)
+GN
+
+# FINDING NEXT POPULATION
+NT1 = N + GN
+NT1
+
+#plot
+# exersie 5
+R0 <- 1.361
+K <- 560
+
+time <- 1:100
+N <- numeric(100)
+N[1] <- 1
+
+for(i in 2:100){
+  G <- R0*N[i-1]*(1 - N[i-1]/K)
+  N[i] <- N[i-1] + G
+}
+
+plot(time, N, type="l", col="blue", lwd=2,
+     xlab="Time",
+     ylab="Population size (N)",
+     main="Logistic population growth")
+
