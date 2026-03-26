@@ -58,3 +58,13 @@ results <- data.frame(
 )
 
 print(results)
+
+#3b
+plot(results$N, results$R,
+     xlab = "Population size (N)",
+     ylab = "Growth rate (R)",
+     main = "Relationship between R and N",
+     pch = 19,
+     col = "green")
+model <- lm(R ~ N, data = results)
+summary(model)
