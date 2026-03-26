@@ -79,7 +79,7 @@ ggplot(df, aes(Date, Anomaly, fill = Phase)) +
 library(readxl)     # reading Excel
 library(dplyr)      # data manipulation
 library(ggplot2)    # nice stacked bar plot
-# install.packages("vcd")   # uncomment if not installed – for classic mosaic
+
 library(vcd)
 
 
