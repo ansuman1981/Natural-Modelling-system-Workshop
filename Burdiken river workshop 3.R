@@ -63,3 +63,13 @@ pivot_table
 #Convert to Percentages
 
 prop_table <- prop.table(pivot_table, margin = 1)
+
+# create barchart
+barplot(t(prop_table),
+        beside = FALSE,
+        col = c("lightblue", "orange", "red"),
+        legend = TRUE,
+        main = "Distribution of Streamflow Categories by Month",
+        xlab = "Month",
+        ylab = "Percentage of Observations")
+
