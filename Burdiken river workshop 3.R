@@ -35,3 +35,13 @@ abline(model, col = "red", lwd = 2)
 
 
 cor(data$Jan, data$Feb, use = "complete.obs")
+
+#Create flow categories for January and February 
+
+data$JanGroup <- cut(data$Jan,
+                     breaks = c(0, 1000000, 5000000, Inf),
+                     labels = c("Low", "Moderate", "High"))
+
+data$FebGroup <- cut(data$Feb,
+                     breaks = c(0, 1000000, 5000000, Inf),
+                     labels = c("Low", "Moderate", "High"))
