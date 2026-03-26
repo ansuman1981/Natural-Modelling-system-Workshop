@@ -38,3 +38,23 @@ plot(N, G,
      ylab = "G(N)",
      main = "Production Function G(N)")
 grid()
+
+#3a
+
+library(readxl)
+
+data <- read_excel("Paramecium_aurelia.xlsx")
+
+N <- data$Paramecium
+
+lambda <- N[-1] / N[-length(N)]
+
+R <- lambda - 1
+
+results <- data.frame(
+  N = N[-length(N)],
+  lambda = lambda,
+  R = R
+)
+
+print(results)
