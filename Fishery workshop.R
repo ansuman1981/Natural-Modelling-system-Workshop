@@ -24,3 +24,17 @@ plot(N, G, type="l", lwd=2, col="red",
      ylab="G(N)",
      main="Production Function G(N) = 0.4N")
 grid()
+
+#2cii
+
+N <- seq(0,200,1)
+G <- -0.1*N
+
+plot(N, G,
+     type = "l",
+     col = "purple",        # line color
+     lwd = 3,            # bold/thick line
+     xlab = "Population Size (N)",
+     ylab = "G(N)",
+     main = "Production Function G(N)")
+grid()
