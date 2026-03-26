@@ -68,3 +68,23 @@ plot(results$N, results$R,
      col = "green")
 model <- lm(R ~ N, data = results)
 summary(model)
+
+plot(results$N, results$R,
+     xlab = "Population size (N)",
+     ylab = "Growth rate (R)",
+     main = "Relationship between R and N",
+     pch = 19,
+     col = "green")
+
+abline(model, col="red", lwd=2)
+
+R0 = 1.361
+b = -0.00243
+k= -(R0/b)
+k
+
+N = 1
+a = 1.361
+b = -0.00243
+r = a + b*N
+r
