@@ -21,3 +21,17 @@ median(data$Jan, na.rm = TRUE)
 sd(data$Jan, na.rm = TRUE)
 quantile(data$Jan, na.rm = TRUE)
 IQR(data$Jan, na.rm = TRUE)
+
+plot(data$Jan, data$Feb,
+     main = "February vs January Streamflow",
+     xlab = "January Streamflow (ML)",
+     ylab = "February Streamflow (ML)",
+     pch = 16,
+     col = "blue"
+)
+
+model <- lm(Feb ~ Jan, data = data)
+abline(model, col = "red", lwd = 2)
+
+
+cor(data$Jan, data$Feb, use = "complete.obs")
