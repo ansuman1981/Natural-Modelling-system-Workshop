@@ -14,3 +14,13 @@ plot(t, N, type="l", lwd=2, col="blue",
      ylab="Population Size (N)",
      main="Population Growth Over 50 Years")
 grid()
+
+#2bii
+N <- seq(0,50,1)
+G <- 0.4*N
+
+plot(N, G, type="l", lwd=2, col="red",
+     xlab="Population Size (N)",
+     ylab="G(N)",
+     main="Production Function G(N) = 0.4N")
+grid()
